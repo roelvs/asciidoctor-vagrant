@@ -21,7 +21,7 @@ Once provisioned, use
 vagrant ssh
 ----
 
-to get in the virtual machine. The /vagrant directory is mapped to the folder containing the Vagrantfile. Now you have all the asciidoctor-tools at your fingertips...
+to get in the virtual machine. The /vagrant directory of the vm is mapped to the folder containing the Vagrantfile. Now you should have all the asciidoctor-tools at your fingertips...
 
 .example
 [source, bash]
@@ -37,16 +37,16 @@ asciidoctor-pdf -r asciidoctor-mathematical test.adoc -a pdf-stylesdir=. -a pdf-
 
 == Requirements
 
-- Vagrant (http://www.vagrantup.com)
-- Virtualbox (http://www.virtualbox.org)
+* Vagrant (http://www.vagrantup.com)
+* Virtualbox (http://www.virtualbox.org)
 
 == Included
 
-* Asciidoctor (latest stable)
-* Asciidoctor-pdf (latest alpha)
-* Asciidoctor-mathematical 
+* [x] Asciidoctor (latest stable)
+* [x] Asciidoctor-pdf (latest alpha)
+* [x] Asciidoctor-mathematical 
 ** version: build from source
 ** https://github.com/ProgramFan/asciidoctor-mathematical.git
-* blockdiag, seqdiag,actdiag,nwdiag
-* asciidoctor-confluence
-* asciidoctor-epub (latest alpha)
+* [x] Blockdiag, seqdiag,actdiag,nwdiag
+* [x] Asciidoctor-confluence
+* [x] Asciidoctor-epub (latest alpha)
