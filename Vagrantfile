@@ -89,7 +89,7 @@ Vagrant.configure(2) do |config|
  sudo easy_install nwdiag
  
  # Build and install Asciidoctor-Mathematical
- sudo dnf -y install pango pango-devel cairo-devel cmake lyx-fonts libxml2 libxml2-devel flex bison rubygem-gdk3 gdk-pixbuf2 gdk-pixbuf2-devel valgrind gcc-c++ bzip2-devel libffi-devel
+ sudo dnf -y install git pango pango-devel cairo-devel cmake lyx-fonts libxml2 libxml2-devel flex bison rubygem-gdk3 gdk-pixbuf2 gdk-pixbuf2-devel valgrind gcc-c++ bzip2-devel libffi-devel
  git clone https://github.com/ProgramFan/asciidoctor-mathematical.git
  cd asciidoctor-mathematical
  gem build asciidoctor-mathematical.gemspec
