@@ -1,2 +1,52 @@
-# asciidoctor-vagrant
+= Asciidoctor-vagrant
 Vagrantfile with the most important parts of the Asciidoctor-toolchain preconfigured
+
+== Intro
+Asciidoc(tor) (http://www.asciidoctor.org) is a great markup language for documentation. 
+Installing the complete toolchain can seem daunting at first because of a long list of prerequisites (packages! operating system!, ..), but this Vagrantfile makes installation a breeze...
+
+This vagrant machine is a clean Fedora 22 cloud image, provisioned at runtime. Changing or updating is just a matter of altering the Vagrantfile.
+
+Just put the *Vagrantfile* in your documentation directory and type in your terminal/cmd prompt:
+
+[source,bash]
+----
+ vagrant up
+----
+
+Once provisioned, use 
+
+[source, bash]
+----
+vagrant ssh
+----
+
+to get in the virtual machine. The /vagrant directory is mapped to the folder containing the Vagrantfile. Now you have all the asciidoctor-tools at your fingertips...
+
+.example
+[source, bash]
+----
+#create a default html5 output from test.adoc
+asciidoctor test.adoc
+
+#create a pdf file from the same test.adoc
+asciidoctor-pdf -r asciidoctor-mathematical test.adoc -a pdf-stylesdir=. -a pdf-style=pdf-theme.yml -a pdf-fontsdir=pdffonts/
+----
+
+
+
+== Requirements
+
+- Vagrant (http://www.vagrantup.com)
+- Virtualbox (http://www.virtualbox.org)
+
+== Included
+
+* Asciidoctor (latest stable)
+* Asciidoctor-pdf (latest alpha)
+* Asciidoctor-mathematical 
+** version: build from source
+** https://github.com/ProgramFan/asciidoctor-mathematical.git
+* blockdiag, seqdiag,actdiag,nwdiag
+* asciidoctor-confluence
+* asciidoctor-epub (latest alpha)
