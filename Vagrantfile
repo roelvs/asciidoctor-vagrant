@@ -52,7 +52,7 @@ Vagrant.configure(2) do |config|
   #   vb.gui = true
   #
   #   # Customize the amount of memory on the VM:
-  #   vb.memory = "1024"
+     vb.memory = "2048" # less (1024) is fine for the conversion of little documents, 2048 is safe for average books (tested with 150 pages using a lot of images and some STEM blocks). 
   # end
   #
   # View the documentation for the provider you are using for more
