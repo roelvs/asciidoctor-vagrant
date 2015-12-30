@@ -69,9 +69,10 @@ Vagrant.configure(2) do |config|
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
    config.vm.provision "shell", inline: <<-SHELL
-     sudo dnf install -y tar make gcc ruby ruby-devel rubygems graphviz rubygem-nokogiri asciidoctor unzip findutils which wget python-devel zlib-devel
+     sudo dnf install -y tar make gcc ruby ruby-devel rubygems graphviz rubygem-nokogiri unzip findutils which wget python-devel zlib-devel
 
  # installation of the core gems. Using the alpha versions where available...
+ gem install --no-ri --no-rdoc asciidoctor --pre
  gem install --no-ri --no-rdoc asciidoctor-diagram
  gem install --no-ri --no-rdoc asciidoctor-epub3 --pre
  gem install --no-ri --no-rdoc asciidoctor-pdf --pre
